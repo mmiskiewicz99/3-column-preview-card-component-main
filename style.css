@@ -1,0 +1,136 @@
+/*### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ background-color: hsl(0, 0%, 95%); 
+ 
+}
+
+/*container*/
+.container{
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 20px;
+    font-size: 15px;
+    margin: auto;
+    max-width: 325px;
+}
+
+.container h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    padding-left: 2rem;
+    padding-top: 0.8rem;
+}
+
+.container img{
+    padding-top:1.5rem;
+    padding-left: 2.5rem;
+}
+
+.container p{
+    padding-left: 2rem;
+    padding-top: 0.8rem;
+    padding-right: 2rem;;
+    
+}
+
+
+/*sections*/
+.sedan{
+    background-color:hsl(31, 77%, 52%) ;
+    padding:1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.suv{
+    background-color: hsl(184, 100%, 22%);
+    padding:1rem;
+}
+.luxury{
+    background-color: hsl(179, 100%, 13%);
+    padding:1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/*button*/
+.more{
+    background-color: white;
+    border-color: white;
+    border-radius: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+    border: 1px white solid;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0.9rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sedan .more{
+    color: hsl(31, 77%, 52%);
+}
+.suv .more{
+    color: hsl(184, 100%, 22%);
+}
+.luxury .more{
+    color: hsl(179, 100%, 13%);
+}
+
+.more:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px white solid;
+}   
+
+
+/* responsivity settings*/
+@media (min-width: 900px) {
+    .container{
+        display: flex;
+        max-width: 900px;
+        height: 70vh;
+    }
+    .container p {
+        height: 170px;
+    }
+
+    .sedan{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }    
+    .luxury{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+    .more{
+        margin-left: 30px;
+        margin-right: 80px;
+        margin-bottom: 20px;
+    }
+   body{
+    margin-top: 15vh;
+   }
+}
